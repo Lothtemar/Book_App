@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myBookLibrary</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div>
+            <div class="header-left">
+                <h1>myLibrary</h1>
+                <button class="add-book-btn">Add a Book</button>
+            </div>
+            <div class="header-right">
+                <img src="img/avatarJavier.jpg">
+                <div>
+                    <p>Javier</p>
+                    <p>@FullStack</p>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="card-container">
+            <!--  CARD EXAMPLE
+            <div class="card">
+                <img src="img/index.jpeg">
+                <div>
+                    <p class="card-ttl">Title</p>
+                    <p class="card-author">Author</p>
+                    <p class="card-pages">Pages</p>
+                    <div class="read-btn">Readed</div>
+                    <div class="remove-btn">Remove</div>
+                </div>
+            </div>
+            -->
+
+        </div>
+    </main>
+    <footer>
+        <div class="footer-cnt">
+            <p>Copyright Yggdrasil-Tena 2022</p>
+        </div>
+    </footer>
+    <div id="input-book-card" class="hidden"> <!-- .active = display it if replaced by .hidden it hides it-->
+        <div class="form-add-book">
+        <!-- <form class="form-add-book"> It breaks Submit button-->
+            <label for="title">Book Title</label>
+            <input type="text" id="title">
+            <label for="author">Author</label>
+            <input type="text" id="author">
+            <label for="pages">Total Pages</label>
+            <input type="text" id="pages">
+            <p>Have you readed it?</p>
+            <label for="readed" class="switch">
+                <input type="checkbox" id="readed" checked>
+                <span class="slider round"></span>
+            </label>
+            <div>
+                <span id="span-check" class="hidden"></span>
+                <button id="set-cover" class="cover-btn">Select Book Cover</button>
+                <span id="span-check" class="hidden">&#10003</span>
+            </div>
+            <button class="submit-btn">Submit</button>
+            <!-- 
+            <input class="submit-btn" type="submit" value="Submit">
+            </form> -->
+        </div>        
+    </div>
+    <div id="edit-book-card" class="hidden"> <!-- .active = display it if replaced by .hidden it hides it-->
+        <div class="form-edit-book">
+        <!-- <form class="form-add-book"> It breaks Submit button-->
+            <label for="edit-title">Book Title</label>
+            <input type="text" id="edit-title">
+            <label for="edit-author">Author</label>
+            <input type="text" id="edit-author">
+            <label for="edit-pages">Total Pages</label>
+            <input type="text" id="edit-pages">
+            <p>Have you readed it?</p>
+            <label for="edit-readed" class="switch">
+                <input type="checkbox" id="edit-readed" checked>
+                <span class="slider round"></span>
+            </label>
+            <div>
+                <span id="span-check" class="hidden"></span>
+                <button id="edit-set-cover" class="cover-btn">Select Book Cover</button>
+                <span id="span-check" class="hidden">&#10003</span>
+            </div>
+            <button class="submit-edit-btn">Submit</button>
+            <!-- 
+            <input class="submit-btn" type="submit" value="Submit">
+            </form> -->
+        </div>        
+    </div>
+
+    <div id="layer" class="add-book-layer"></div> <!-- .active-layer displays it if removed is hidden-->
+    <div id="book-cover-storage" class="hidden"></div>
+</body>
+</html>
